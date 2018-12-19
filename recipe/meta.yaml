@@ -23,7 +23,7 @@ requirements:
 test:
   commands:
     - test -f "${PREFIX}/include/idn2.h"
-    - test -f "${PREFIX}/lib/libidn2.${SHLIB_EXT}"
+    - test -f "${PREFIX}/lib/libidn2${SHLIB_EXT}"
 
 about:
   home: "https://www.gnu.org/software/libidn/#libidn2"
