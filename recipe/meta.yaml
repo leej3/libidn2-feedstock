@@ -19,6 +19,11 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - make
+    - pkg-config
+  host:
+    - gettext
+    - libunistring
 
 test:
   commands:
