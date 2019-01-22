@@ -10,7 +10,7 @@ source:
 
 build:
   skip: True  # [win]
-  number: 0
+  number: 1000
   run_exports:
     # _Amazing_ backwards compatibility so pin to major number:
     #    https://abi-laboratory.pro/tracker/timeline/libidn2/
@@ -19,6 +19,11 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - make
+    - pkg-config
+  host:
+    - gettext
+    - libunistring
 
 test:
   commands:

@@ -1,8 +1,10 @@
 #!/bin/bash
 
+set -ex
 set -o pipefail
 
 ./configure --prefix="${PREFIX}" \
+    CC_FOR_BUILD="${CC}" \
     --enable-shared \
     --disable-static \
     --disable-gtk-doc \
@@ -12,8 +14,7 @@ set -o pipefail
     --disable-code-coverage \
     --without-libiconv-prefix \
     --without-libintl-prefix \
-    --without-gcov \
-    2>&1 | tee configure.log
+    --without-gcov
 
 make
 make check
