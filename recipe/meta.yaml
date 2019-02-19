@@ -1,4 +1,4 @@
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: libidn2
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/libidn/libidn2-{{ version }}.tar.gz
-  sha256: 032398dbaa9537af43f51a8d94e967e3718848547b1b2a4eb3138b20cad11d32
+  sha256: 95416080329298a13269e13175041b530cec3d98b54cafae9424b8dfd22078b1
 
 build:
   skip: True  # [win]
-  number: 1000
+  number: 0
   run_exports:
     # _Amazing_ backwards compatibility so pin to major number:
     #    https://abi-laboratory.pro/tracker/timeline/libidn2/
